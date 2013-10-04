@@ -1,1 +1,15 @@
 // Your custom SCSS should be written here...
+
+.listing {
+	width:300px;
+	min-height:150px;
+	padding:10px;
+}
+
+.listing .image {
+	width:60px
+}
+
+.listing .info {
+	width:240px;
+}

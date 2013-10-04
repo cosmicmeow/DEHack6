@@ -2127,7 +2127,7 @@ abbr { text-transform: none; }
 .sixteen.colgrid .row .fourteen.centered { margin-left: 6.38298%; }
 .sixteen.colgrid .row .fifteen.centered { margin-left: 3.19149%; }
 
-img, object, embed { height: auto; }
+img, object, embed { height: auto; vertical-align: middle; }
 
 img { -ms-interpolation-mode: bicubic; }
 
@@ -2165,7 +2165,7 @@ img { -ms-interpolation-mode: bicubic; }
 /*=====================================================
  Navigation (with dropdowns)
  ======================================================*/
-.navbar { width: 100%; min-height: 53px; display: block; background: #141414; position: relative; }
+.navbar { width: 100%; display: block; background: #141414; position: relative; }
 @media only screen and (max-width: 767px) { .navbar { border: none; }
   .navbar .column, .navbar .columns { min-height: 0; } }
 .navbar.fixed { position: fixed; z-index: 99999; }
@@ -2583,3 +2583,5 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 .listing .image { width: 60px; }
 
 .listing .info { width: 240px; }
+
+.btn.login, .skiplink.login { background: #151615; border: 1px solid #000; }

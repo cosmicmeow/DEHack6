@@ -1209,6 +1209,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #d04526; }
 
 h4 { line-height: 15px; padding: 0 0 5px 0; }
 
+h6 { color: #be9332; }
+
 @media only screen and (max-width: 767px) { h1, h2, h3, h4, h5, h6 { word-wrap: break-word; } }
 h1 { font-size: 68px; font-size: 4.25rem; }
 h1.xlarge { font-size: 110px; font-size: 6.875rem; }
@@ -2165,7 +2167,7 @@ img { -ms-interpolation-mode: bicubic; }
 /*=====================================================
  Navigation (with dropdowns)
  ======================================================*/
-.navbar { width: 100%; display: block; background: #141414; position: relative; }
+.navbar { z-index: 999; width: 100%; display: block; background: #141414; position: relative; }
 @media only screen and (max-width: 767px) { .navbar { border: none; }
   .navbar .column, .navbar .columns { min-height: 0; } }
 .navbar.fixed { position: fixed; z-index: 99999; }

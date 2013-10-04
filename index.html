@@ -40,47 +40,45 @@
 
 	<script src="js/libs/modernizr-2.6.2.min.js"></script>
 
-	<!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
-  <style>
-    #slides {
-      display: none
-    }
 
-    .container {
-      margin: 0 auto
-    }
+	<!-- the CSS for Smooth Div Scroll -->
+	<link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
+	
+	<!-- Styles for my specific scrolling content -->
+	<style type="text/css">
 
-    /* For tablets & smart phones */
-    @media (max-width: 767px) {
-      .container {
-        width: auto
-      }
-    }
+		#makeMeScrollable
+		{
+			width:100%;
+			height: 200px;
+			position: relative;
+			border:1px solid #000;
+		}
+		
+		/* Replace the last selector for the type of element you have in
+		   your scroller. If you have div's use #makeMeScrollable div.scrollableArea div,
+		   if you have links use #makeMeScrollable div.scrollableArea a and so on. */
+		#makeMeScrollable div.scrollableArea img
+		{
+			width:200px;
+			height:200px;
+			position: relative;
+			float: left;
+			margin-left: 5px;
+			margin-right:5px;
+			padding: 0;
+			/* If you don't want the images in the scroller to be selectable, try the following
+			   block of code. It's just a nice feature that prevent the images from
+			   accidentally becoming selected/inverted when the user interacts with the scroller. */
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+		}
+	</style>
 
-    /* For smartphones */
-    @media (max-width: 480px) {
-      .container {
-        width: auto
-      }
-    }
-
-    /* For smaller displays like laptops */
-    @media (min-width: 768px) and (max-width: 979px) {
-      .container {
-        width: 724px
-      }
-    }
-
-    /* For larger displays */
-    @media (min-width: 1200px) {
-      .container {
-        width: 940px
-      }
-    }
-  </style>
-  <!-- SlidesJS Required: -->
-
-
+	
 
 </head>
 
@@ -129,6 +127,9 @@
 	<script src="js/main.js"></script>
 
 
+
+
+
 	<!-- Change UA-XXXXX-X to be your site's ID -->
 	<!--<script>
 	window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
@@ -157,17 +158,19 @@
 
 	<div class="row navbar" id="bottomnav" style="position:fixed;bottom:0;left:0;text-align:center">
 			<div class="four columns">
-			    <a href="#">Favorites</a>
+			    <a href="#"><img src="img/fave.png"></a>
 			</div>
 		  	
 		  	<div class="four columns">
-			    <a href="#">Search</a>
+			    <a href="search.html"><img src="img/search.png"></a>
 			</div>
 
 			<div class="four columns">
-			    <a href="#">Setting</a>
+			    <a href="setting.html"><img src="img/settings.png"></a>
 			</div>
 	</div>
+
+	
 
 
 
@@ -175,28 +178,18 @@
 	<div class="row">
 		<div class="twelve columns" style="background-color:#fff; padding:15px 15px 15px 15px">
 			<h2>Trending</h2>
-			 <!-- SlidesJS Required: Start Slides -->
-			  <!-- The container is used to define the width of the slideshow -->
-			  <div class="container">
-			    <div id="slides">
-			      <img src="img/pic1.jpg">
-			      <img src="img/pic2.jpg">
-			      <img src="img/pic3.jpg">
-			      <img src="img/pic4.jpg">
-			      <img src="img/pic5.jpg">
-			      <img src="img/pic1.jpg">
-			      <img src="img/pic2.jpg">
-			      <img src="img/pic3.jpg">
-			      <img src="img/pic4.jpg">
-			      <img src="img/pic5.jpg">
-			      <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-left-circled"></i></a>
-			      <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-right-circled"></i></a>
-			    </div>
-			  </div>
-			  <!-- End SlidesJS Required: Start Slides -->
-<br>	
+
+			<div id="makeMeScrollable">
+				<a href="listing.html"><img src="img/pic1.jpg"></a>
+				<a href="listing.html"><img src="img/pic2.jpg"></a>
+				<a href="listing.html"><img src="img/pic3.jpg"></a>
+				<a href="listing.html"><img src="img/pic4.jpg"></a>
+				<a href="listing.html"><img src="img/pic5.jpg"></a>
+			</div>
 
 
+			 
+			<br>	
 			<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -217,21 +210,41 @@
 
 
 
-	<!-- SlidesJS Required: Link to jquery.slides.js -->
-	  <script src="js/jquery.slides.js"></script>
-	  <!-- End SlidesJS Required -->
+	<!-- LOAD JAVASCRIPT LATE - JUST BEFORE THE BODY TAG 
+	     That way the browser will have loaded the images
+		 and will know the width of the images. No need to
+		 specify the width in the CSS or inline. -->
 
-	  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
-	  <script>
-	    $(function() {
-	      $('#slides').slidesjs({
-	        width: 940,
-	        height: 528,
-	        navigation: false
-	      });
-	    });
-	  </script>
-	  <!-- End SlidesJS Required -->
+	<!-- jQuery library - Please load it from Google API's -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+
+	<!-- jQuery UI Widget and Effects Core (custom download)
+	     You can make your own at: http://jqueryui.com/download -->
+	<script src="js/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>
+	
+	<!-- Latest version (3.0.6) of jQuery Mouse Wheel by Brandon Aaron
+	     You will find it here: http://brandonaaron.net/code/mousewheel/demos -->
+	<script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
+
+	<!-- jQuery Kinectic (1.5) used for touch scrolling -->
+	<script src="js/jquery.kinetic.js" type="text/javascript"></script>
+
+	<!-- Smooth Div Scroll 1.3 minified-->
+	<script src="js/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
+
+	<!-- If you want to look at the uncompressed version you find it at
+	     js/jquery.smoothDivScroll-1.3.js -->
+
+	<!-- Plugin initialization -->
+	<script type="text/javascript">
+		// Initialize the plugin with no custom options
+		$(document).ready(function () {
+			// None of the options are set
+			$("div#makeMeScrollable").smoothDivScroll({
+				autoScrollingMode: "onStart"
+			});
+		});
+	</script>
 
 
 

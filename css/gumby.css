@@ -44,7 +44,7 @@ html { font-size: 16px; line-height: 1.625em; }
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body { background: #4a4d50; font-family: "Open Sans"; font-weight: 400; color: #555555; position: relative; -webkit-font-smoothing: antialiased; }
+body { background: white; font-family: "Open Sans"; font-weight: 400; color: #555555; position: relative; -webkit-font-smoothing: antialiased; }
 @media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; } }
 
 html, body { height: 100%; }
@@ -1207,6 +1207,8 @@ i.icon-logo-db:before { content: "\f603"; height: inherit; }
 h1, h2, h3, h4, h5, h6 { font-family: "Open Sans"; font-weight: 300; color: #444444; text-rendering: optimizeLegibility; padding-top: 0.273em; line-height: 1.15538em; padding-bottom: 0.273em; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #d04526; }
 
+h4 { line-height: 15px; padding: 0 0 5px 0; }
+
 @media only screen and (max-width: 767px) { h1, h2, h3, h4, h5, h6 { word-wrap: break-word; } }
 h1 { font-size: 68px; font-size: 4.25rem; }
 h1.xlarge { font-size: 110px; font-size: 6.875rem; }
@@ -2125,7 +2127,7 @@ abbr { text-transform: none; }
 .sixteen.colgrid .row .fourteen.centered { margin-left: 6.38298%; }
 .sixteen.colgrid .row .fifteen.centered { margin-left: 3.19149%; }
 
-img, object, embed { max-width: 100%; height: auto; }
+img, object, embed { height: auto; }
 
 img { -ms-interpolation-mode: bicubic; }
 
@@ -2163,7 +2165,7 @@ img { -ms-interpolation-mode: bicubic; }
 /*=====================================================
  Navigation (with dropdowns)
  ======================================================*/
-.navbar { width: 100%; min-height: 60px; display: block; background: #141414; position: relative; }
+.navbar { width: 100%; min-height: 53px; display: block; background: #141414; position: relative; }
 @media only screen and (max-width: 767px) { .navbar { border: none; }
   .navbar .column, .navbar .columns { min-height: 0; } }
 .navbar.fixed { position: fixed; z-index: 99999; }
@@ -2518,7 +2520,7 @@ form fieldset legend { padding: 5px 10px; }
 .tabs.vertical .tab-nav { border: none; }
 .tabs.vertical .tab-nav > li { display: block; margin: 0; margin-bottom: 5px; }
 .tabs.vertical .tab-nav > li.active { position: relative; z-index: 99; }
-.tabs.vertical .tab-nav > li.active > a { border-right: 1px solid #4a4d50; }
+.tabs.vertical .tab-nav > li.active > a { border-right: 1px solid white; }
 .tabs.vertical .tab-nav > li > a { border: 1px solid #e5e5e5; -webkit-border-radius: 4px 0 0 4px; -moz-border-radius: 4px 0 0 4px; -ms-border-radius: 4px 0 0 4px; -o-border-radius: 4px 0 0 4px; border-radius: 4px 0 0 4px; }
 .tabs.vertical .tab-content { padding: 10px 0 30px 20px; margin-left: -1px; border-left: 1px solid #e5e5e5; }
 
@@ -2548,7 +2550,7 @@ body .video.twitch, body .video.youtube.show_controls { padding-top: 30px; }
 table { display: table; background-color: white; border-collapse: collapse; border-spacing: 0; margin-bottom: 20px; width: 100%; border: 1px solid #e5e5e5; }
 table caption { text-align: center; font-size: 30px; padding: .75em; }
 table thead th, table tbody td, table tr td { display: table-cell; padding: 10px; vertical-align: top; text-align: left; border-top: 1px solid #e5e5e5; }
-table tr td, table tbody tr td { font-size: 16px; }
+table tr td, table tbody tr td { font-size: 16px; line-height: 15px; }
 table tr td:first-child { font-weight: bold; }
 table thead { background-color: #3085d6; color: #fff; }
 table thead tr th { font-size: 16px; font-weight: bold; vertical-align: bottom; }
